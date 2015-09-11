@@ -24,7 +24,6 @@ public class Car
         // initialise instance variables
         fuelEfficiency = fuelEfficiency;
         fuelInTank = 0;
-        x = 0;
     }
 
     /**
@@ -36,11 +35,34 @@ public class Car
      *              than is available
      * @post       
      * 
-     * @param      distance that the car drives in miles
+     * @param      distance distance that the car drives in miles
      */
     public void drive(double distance)
     {
-
+        fuelInTank -= distance / fuelEfficiency;
     }
+    
+    /**
+     * Returns the amount of gas in the car's tank in units of gallons
+     * 
+     * @return the amount of gas in the car's tank in units of gallons
+     */
+    public double getGasInTank()
+    {
+        return fuelInTank;
+    }
+    
+    /**
+     * Increments the fuel in the car's tank by a specified amount in gallons
+     *
+     * @pre     gallonsOfGas must be a positive number
+     * 
+     * @param   gallonsOfGas amount of gas to add to the car's tank in gallons
+     */
+    public void addGas(double gallonsOfGas)
+    {
+        fuelInTank += gallonsOfGas;
+    }
+
 
 }
