@@ -22,8 +22,8 @@ public class Car
     public Car(double fuelEfficiency)
     {
         // initialise instance variables
-        fuelEfficiency = fuelEfficiency;
-        fuelInTank = 0;
+        this.fuelEfficiency = fuelEfficiency;
+        this.fuelInTank = 0;
     }
 
     /**
@@ -39,7 +39,7 @@ public class Car
      */
     public void drive(double distance)
     {
-        fuelInTank -= distance / fuelEfficiency;
+        this.fuelInTank -= distance / this.fuelEfficiency;
     }
     
     /**
@@ -49,7 +49,7 @@ public class Car
      */
     public double getGasInTank()
     {
-        return fuelInTank;
+        return this.fuelInTank;
     }
     
     /**
