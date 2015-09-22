@@ -7,7 +7,7 @@ public class TargetComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        Circle c1 = draw(Shape circle);
-        
+        Target t1 = new Target(0,0);
+        t1.draw(g2);
     }
 }
