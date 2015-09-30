@@ -9,7 +9,9 @@
 public class AnnuityCalc
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int x;
+    private int pmt;
+    private double i;
+    private int n;
 
     /**
      * Default constructor for objects of class AnnuityCalc
@@ -23,20 +25,13 @@ public class AnnuityCalc
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * Calculates the annuity and returns the value
      */
-    public int getAnnuity()
+    public double getAnnuity()
     {
         // put your code here
-        annuity = this.pmt*((((1+this.i)^(this.n-1)/this.i)/(1+this.i)^(this.n-1))+1);
+        double power = Math.pow((1 + this.i),(this.n-1));
+        double annuity = this.pmt*(((power/this.i)/power)+1);
         return annuity;
     }
 
