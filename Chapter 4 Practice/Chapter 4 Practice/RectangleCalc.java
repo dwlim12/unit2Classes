@@ -1,7 +1,7 @@
 import java.awt.Rectangle;
 import java.util.Scanner;
 
-public class RectanglePrinter
+public class RectangleCalc
 {
     public static void main(String[] args)
     {
