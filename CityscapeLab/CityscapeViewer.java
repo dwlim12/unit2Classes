@@ -30,11 +30,13 @@ public class CityscapeViewer
         Scanner user_input = new Scanner(System.in);
         System.out.print("What is the radius of the sun?: ");
         int sun_radius = user_input.nextInt();
-        System.out.print("How many floors will the building have?: ");
+        System.out.print("How many floors will the building have? (max 19): ");
         int b_height = user_input.nextInt();
+        System.out.print("How far is the car from the end of the screen?: ");
+        int car_distance = user_input.nextInt();
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent(sun_radius,b_height);
+        CityscapeComponent component = new CityscapeComponent(sun_radius,b_height,car_distance);
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the

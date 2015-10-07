@@ -18,17 +18,19 @@ public class CityscapeComponent extends JComponent
     // ...
     private int sun_radius;
     private int building_height;
+    private int car_distance;
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
     /**
      * Default contructor for objects of class Cityscape
      */
-    public CityscapeComponent(int sun_radius, int building_height)
+    public CityscapeComponent(int sun_radius, int building_height, int car_distance)
     {
         //initialize instance variables
         this.sun_radius = sun_radius;
         this.building_height = building_height;
+        this.car_distance = car_distance;
     }
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -57,6 +59,10 @@ public class CityscapeComponent extends JComponent
         sun.draw(g2);
         Building b1 = new Building(500,building_height);
         b1.draw(g2);
+        Building b2 = new Building(250,building_height);
+        b2.draw(g2);
+        Car c1 = new Car(car_distance);
+        c1.draw(g2);
         
     }
     

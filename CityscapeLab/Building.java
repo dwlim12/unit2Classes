@@ -30,7 +30,7 @@ public class Building
     public void draw(Graphics2D g2)
     {
         // put your code here
-        Rectangle building = new Rectangle(xLeft,0,100,30 + (25*floors));
+        Rectangle building = new Rectangle(xLeft,0,80,30 + (25*floors));
         int yTop = (500-(30+(25*floors)));
         building.translate(0,yTop);
         Color b_blue = new Color(102,102,255);
@@ -43,12 +43,48 @@ public class Building
         g2.setColor(door_color);
         g2.draw(door);
         g2.fill(door);
-        for( int paneTop = yTop + 5;paneTop < yTop + 390; paneTop += 25)
+        for( int paneTop = yTop + 5;paneTop < yTop + (25*floors); paneTop += 25)
         {
-        Rectangle pane = new Rectangle(xLeft + 5, paneTop + 150,20,20);
-        g2.draw(pane);
+        Rectangle pane = new Rectangle(xLeft + 5, paneTop,10,20);
         Color window = new Color(153,204,255);
         g2.setColor(window);
+        g2.draw(pane);
+        g2.fill(pane);
+       }
+       
+       for( int paneTop = yTop + 5;paneTop < yTop + (25*floors); paneTop += 25)
+        {
+        Rectangle pane = new Rectangle(xLeft + 20, paneTop,10,20);
+        Color window = new Color(153,204,255);
+        g2.setColor(window);
+        g2.draw(pane);
+        g2.fill(pane);
+       }
+       
+       for( int paneTop = yTop + 5;paneTop < yTop + (25*floors); paneTop += 25)
+        {
+        Rectangle pane = new Rectangle(xLeft + 35, paneTop,10,20);
+        Color window = new Color(153,204,255);
+        g2.setColor(window);
+        g2.draw(pane);
+        g2.fill(pane);
+       }
+       
+       for( int paneTop = yTop + 5;paneTop < yTop + (25*floors); paneTop += 25)
+        {
+        Rectangle pane = new Rectangle(xLeft + 50, paneTop,10,20);
+        Color window = new Color(153,204,255);
+        g2.setColor(window);
+        g2.draw(pane);
+        g2.fill(pane);
+       }
+       
+       for( int paneTop = yTop + 5;paneTop < yTop + (25*floors); paneTop += 25)
+        {
+        Rectangle pane = new Rectangle(xLeft + 65, paneTop,10,20);
+        Color window = new Color(153,204,255);
+        g2.setColor(window);
+        g2.draw(pane);
         g2.fill(pane);
        }
     }
