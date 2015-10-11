@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class CityscapeViewer
 {
     // the cityscape will be animated for 60 seconds
-    static final int ANIMATION_TIME_IN_SECONDS = 60;
+    static final int ANIMATION_TIME_IN_SECONDS = 180;
    
     /**
      * main method for the program which creates and configures the frame for the program
@@ -28,15 +28,18 @@ public class CityscapeViewer
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
         Scanner user_input = new Scanner(System.in);
-        System.out.print("What is the radius of the sun?: ");
+        System.out.print("What is the radius of the sun? (>=50): ");
         int sun_radius = user_input.nextInt();
+        System.out.print("How far is the sun from the left of the screen? (>0): ");
+        int sun_distance = user_input.nextInt();
         System.out.print("How many floors will the building have? (max 19): ");
         int b_height = user_input.nextInt();
-        System.out.print("How far is the car from the end of the screen?: ");
+        System.out.print("How far is the car from the left of the screen? (>0): ");
         int car_distance = user_input.nextInt();
+        int moon_distance = 750;
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent(sun_radius,b_height,car_distance);
+        CityscapeComponent component = new CityscapeComponent(sun_radius,sun_distance,b_height,car_distance,moon_distance);
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the

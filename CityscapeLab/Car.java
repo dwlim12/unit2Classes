@@ -1,6 +1,8 @@
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Arc2D;
 import java.awt.Color;
 
 /**
@@ -24,7 +26,7 @@ public class Car
     }
 
     /**
-     * Draws the sun with specified distance by user
+     * Draws the car with specified distance by user
      *
      */
     public void draw(Graphics2D g2)
